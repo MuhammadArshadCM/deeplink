@@ -1,4 +1,6 @@
 const express = require("express");
+const path = require("path");
+const fs = require("fs");
 const app = express();
 const port = 8000;
 
@@ -73,6 +75,12 @@ app.get("/.well-known/apple-app-site-association", (req, res) => {
     },
   };
   return res.status(200).json(response);
+});
+
+app.get("*", (req, res) => {
+  const templatePath = path.join(__dirname, "./assets/index.html");
+  const source = fs.readFileSync(templatePath, { encoding: "utf8" });
+  return res.send(source);
 });
 
 app.listen(port, () => {
