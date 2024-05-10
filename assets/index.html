@@ -46,13 +46,14 @@
 
   <script>
     var result = detect.parse(navigator.userAgent);
-    alert(result.os.family);
-    if (result.os.family === "iOS") {
-      window.location.href = "https://apps.apple.com/us/app/id6448728806";
-    } else {
-      window.location.href =
-        "https://play.google.com/store/apps/details?id=in.bslearning.businessstandard";
-    }
+    setTimeout(() => {
+      if (result.os.family === "iOS") {
+        window.location.href = "https://apps.apple.com/us/app/id6448728806";
+      } else {
+        window.location.href =
+          "https://play.google.com/store/apps/details?id=in.bslearning.businessstandard";
+      }
+    }, 1000);
     // You can handle any other logic here - Google Analytics, popups, etc...
   </script>
 </html>
