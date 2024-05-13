@@ -81,8 +81,18 @@ app.get("/.well-known/apple-app-site-association", (req, res) => {
   return res.status(200).json(response);
 });
 
-app.get("*", (req, res) => {
-  const templatePath = path.join(__dirname, "./assets/index.html");
+app.get("/deep-link", (req, res) => {
+  const palyStoreUrl =
+    req?.params?.palyStoreUrl ||
+    "https://play.google.com/store/apps/details?id=in.bslearning.businessstandard";
+  const appStoreUrl =
+    req?.params?.appStoreUrl || "https://apps.apple.com/us/app/id6448728806";
+  const appId = req?.params?.appId || "in.bslearning.businessstandard";
+  const templatePath = path
+    .join(__dirname, "./assets/index.html")
+    .replaceAll("{{playStoreUrl}}", palyStoreUrl)
+    .replaceAll("{{appStoreUrl}}", appStoreUrl)
+    .replaceAll("{{appId}}", appId);
   const source = fs.readFileSync(templatePath, { encoding: "utf8" });
   return res.send(source);
 });
