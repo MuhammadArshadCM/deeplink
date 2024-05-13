@@ -13,6 +13,8 @@ app.get("/.well-known/assetlinks.json", (req, res) => {
         package_name: "in.bslearning.businessstandard",
         sha256_cert_fingerprints: [
           "97:B6:43:6E:63:E4:90:2A:B0:F3:BB:B6:3E:3A:DA:5B:6E:9F:A3:4A:77:06:2C:48:B9:DD:2E:AC:1F:A9:04:D1",
+          "6B:04:80:16:B2:88:BD:00:7B:DF:53:E1:8A:42:EE:40:68:34:44:B5:AB:3B:9B:9A:A5:E6:77:75:F0:5A:76:AA",
+          "E7:49:90:D3:5E:C9:9B:73:A5:57:59:8B:13:5F:10:10:CD:17:90:4F:45:0B:51:4E:14:A5:C1:B3:5E:06:C3:4E",
         ],
       },
     },
@@ -23,6 +25,8 @@ app.get("/.well-known/assetlinks.json", (req, res) => {
         package_name: "in.bslearning.ximek",
         sha256_cert_fingerprints: [
           "97:B6:43:6E:63:E4:90:2A:B0:F3:BB:B6:3E:3A:DA:5B:6E:9F:A3:4A:77:06:2C:48:B9:DD:2E:AC:1F:A9:04:D1",
+          "6B:04:80:16:B2:88:BD:00:7B:DF:53:E1:8A:42:EE:40:68:34:44:B5:AB:3B:9B:9A:A5:E6:77:75:F0:5A:76:AA",
+          "E7:49:90:D3:5E:C9:9B:73:A5:57:59:8B:13:5F:10:10:CD:17:90:4F:45:0B:51:4E:14:A5:C1:B3:5E:06:C3:4E",
         ],
       },
     },
