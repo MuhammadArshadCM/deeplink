@@ -83,7 +83,7 @@ app.get("/.well-known/apple-app-site-association", (req, res) => {
 
 app.get("/deep-link", (req, res) => {
   const palyStoreUrl =
-    req?.params?.palyStoreUrl ||
+    req?.params?.palyStoreUrl ??
     "https://play.google.com/store/apps/details?id=in.bslearning.businessstandard";
   const appStoreUrl =
     req?.params?.appStoreUrl || "https://apps.apple.com/us/app/id6448728806";
