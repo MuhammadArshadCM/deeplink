@@ -41,19 +41,19 @@ app.get("/.well-known/apple-app-site-association", (req, res) => {
       details: [
         {
           appID: "2L58PD84S5.in.bslearning.ismeb",
-          paths: ["NOT /_/*", "/*", "/ismeb"],
+          paths: ["NOT /_/*", "/*", "/deeplink/ismeb"],
         },
         {
           appID: "2L58PD84S5.in.bslearning.rgin",
-          paths: ["NOT /_/*", "/*", "/rgin"],
+          paths: ["NOT /_/*", "/*", "/deeplink/rgin"],
         },
         {
           appID: "2L58PD84S5.in.bslearning.businessstandard.stage",
-          paths: ["NOT /_/*", "/*", "/stage"],
+          paths: ["NOT /_/*", "/*", "/deeplink/stage"],
         },
         {
           appID: "2L58PD84S5.in.bslearning.pug",
-          paths: ["NOT /_/*", "/*", "/pug"],
+          paths: ["NOT /_/*", "/*", "/deeplink/pug"],
         },
         {
           appID: "2L58PD84S5.in.bslearning.bk.stage",
@@ -69,11 +69,11 @@ app.get("/.well-known/apple-app-site-association", (req, res) => {
         },
         {
           appID: "2L58PD84S5.in.bslearning.businessstandard",
-          paths: ["NOT /_/*", "/*", "/businessstandard"],
+          paths: ["NOT /_/*", "/*", "/deeplink/businessstandard"],
         },
         {
           appID: "2L58PD84S5.in.bslearning.gatb",
-          paths: ["NOT /_/*", "/*", "/gtab"],
+          paths: ["NOT /_/*", "/*", "/deeplink/gtab"],
         },
         { appID: "2L58PD84S5.in.bslearning.csbch", paths: ["NOT /_/*", "/*"] },
         { appID: "2L58PD84S5.in.bslearning.aibmp", paths: ["NOT /_/*", "/*"] },
