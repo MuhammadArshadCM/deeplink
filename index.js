@@ -35,35 +35,34 @@ app.get("/.well-known/assetlinks.json", (req, res) => {
 });
 
 app.get("/.well-known/apple-app-site-association", (req, res) => {
+  const subDomain = req.subdomains;
+  console.log(subDomain);
+  let details = [];
+  if (subDomain === "ismeb") {
+    details.push({
+      appID: "2L58PD84S5.in.bslearning.ismeb",
+      paths: ["/deep-link/ismeb*"],
+    });
+  } else if (subDomain === "rgin") {
+    details.push({
+      appID: "2L58PD84S5.in.bslearning.rgin",
+      paths: ["/deep-link/rgin*"],
+    });
+  } else if (subDomain === "stage") {
+    details.push({
+      appID: "2L58PD84S5.in.bslearning.businessstandard.stage",
+      paths: ["/deep-link/stage*"],
+    });
+  } else if (subDomain === "businessstandard") {
+    details.push({
+      appID: "2L58PD84S5.in.bslearning.businessstandard",
+      paths: ["/deep-link/businessstandard*"],
+    });
+  }
   const response = {
     applinks: {
       apps: [],
-      details: [
-        {
-          appID: "2L58PD84S5.in.bslearning.ismeb",
-          paths: ["/deep-link/ismeb*"],
-        },
-        {
-          appID: "2L58PD84S5.in.bslearning.rgin",
-          paths: ["/deep-link/rgin*"],
-        },
-        {
-          appID: "2L58PD84S5.in.bslearning.businessstandard.stage",
-          paths: ["/deep-link/stage*"],
-        },
-        {
-          appID: "2L58PD84S5.in.bslearning.pug",
-          paths: ["/deep-link/pug*"],
-        },
-        {
-          appID: "2L58PD84S5.in.bslearning.businessstandard",
-          paths: ["/deep-link/businessstandard*"],
-        },
-        {
-          appID: "2L58PD84S5.in.bslearning.gatb",
-          paths: ["/deep-link/gtab*"],
-        },
-      ],
+      details,
     },
   };
   return res.status(200).json(response);
