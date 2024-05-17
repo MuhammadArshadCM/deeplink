@@ -39,8 +39,8 @@ app.get("/.well-known/apple-app-site-association", (req, res) => {
     applinks: {
       apps: [],
       details: [{
-        appID: "2L58PD84S5.in.bslearning.ximek",
-        paths: ["/deep-link/ximek*"],
+        appID: "2L58PD84S5.in.bslearning.businessstandard",
+        paths: ["/deep-link/businessstandard*"],
       }],
     },
   };
