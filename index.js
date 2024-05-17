@@ -37,13 +37,11 @@ app.get("/.well-known/assetlinks.json", (req, res) => {
 app.get("/.well-known/apple-app-site-association", (req, res) => {
   const response = {
     applinks: {
-      apps: [
-        {
-          appID: "2L58PD84S5.in.bslearning.ximek",
-          paths: ["/deep-link/ximek*"],
-        },
-      ],
-      details,
+      apps: [],
+      details: {
+        appID: "2L58PD84S5.in.bslearning.businessstandard",
+        paths: ["/deep-link/businessstandard*"],
+      },
     },
   };
   return res.status(200).json(response);
