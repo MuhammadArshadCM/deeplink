@@ -38,10 +38,10 @@ app.get("/.well-known/apple-app-site-association", (req, res) => {
   const response = {
     applinks: {
       apps: [],
-      details: {
+      details: [{
         appID: "2L58PD84S5.in.bslearning.ximek",
         paths: ["/deep-link/ximek*"],
-      },
+      }],
     },
   };
   return res.status(200).json(response);
